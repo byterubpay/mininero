@@ -46,5 +46,5 @@ if len(sys.argv) > 1:
     cnHashOfFile(sys.argv[1])
 else:
     print("provide filename as argument")
-    print("example: MoneroProof.py Keccak.txt")
+    print("example: ByteRubProof.py Keccak.txt")
 

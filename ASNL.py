@@ -12,9 +12,9 @@ l = 2**252 + 27742317777372353535851937790883648493
 
 
 def GenSchnorr(hash_prefix, pub, sec, k): 
-    #modified from original algorithm to match Monero better
+    #modified from original algorithm to match ByteRub better
     #see the ag schnorr pdf for original alg.
-    #Note in Monero, hash prefix is always 32 bytes..
+    #Note in ByteRub, hash prefix is always 32 bytes..
     #hash_prefix = binascii.hexlify(prefix) 
     #k = PaperWallet.skGen() #comment for testing
     comm = MiniNero.scalarmultBase(k)
