@@ -1,6 +1,6 @@
 #use at your own risk
 #Note, this is not quite working apparently, 
-#apparently the viewkeys from the main client and mymonero
+#apparently the viewkeys from the main client and mybyterub
 #although, if they were derived consistently 
 #(which seems reasonable) then it should work
 import MiniNero

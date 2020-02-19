@@ -1,5 +1,5 @@
 #The following code is taken for the most part from 
-#https://github.com/moneroexamples/python-json-rpc.git
+#https://github.com/byterubexamples/python-json-rpc.git
 #I've slightly modified it to fit the cherry py server better
 
 import requests
@@ -56,7 +56,7 @@ def get_amount(amount):
     """encode amount (float number) to the cryptonote format. Hope its correct.
 
     Based on C++ code:
-    https://github.com/byterubpay/bitmonero/blob/master/src/cryptonote_core/cryptonote_format_utils.cpp#L211
+    https://github.com/byterubpay/bitbyterub/blob/master/src/cryptonote_core/cryptonote_format_utils.cpp#L211
     """
 
     CRYPTONOTE_DISPLAY_DECIMAL_POINT = 12
@@ -94,7 +94,7 @@ def get_money(amount):
     """decode cryptonote amount format to user friendly format. Hope its correct.
 
     Based on C++ code:
-    https://github.com/byterubpay/bitmonero/blob/master/src/cryptonote_core/cryptonote_format_utils.cpp#L751
+    https://github.com/byterubpay/bitbyterub/blob/master/src/cryptonote_core/cryptonote_format_utils.cpp#L751
     """
 
     CRYPTONOTE_DISPLAY_DECIMAL_POINT = 12

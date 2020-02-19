@@ -1,4 +1,4 @@
-#monero paper wallet test code, shen noether mrl
+#byterub paper wallet test code, shen noether mrl
 #use at your own risk
 import Crypto.Random.random as rand
 import MiniNero

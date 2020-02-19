@@ -12,7 +12,7 @@ For current Ring CT code in c++, I have refactored this in the following reposit
 https://github.com/ShenNoether/RingCT 
 
 #Note:
-MiniNero is also the name for the suite of mobile monero wallets with [xmr.to](https://xmr.to/) integration. 
+MiniNero is also the name for the suite of mobile byterub wallets with [xmr.to](https://xmr.to/) integration. 
 
 [MiniNero Web: React-based web-wallet and NodeJS server](https://github.com/shennoether/mininodo)
 

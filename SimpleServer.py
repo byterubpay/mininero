@@ -5,7 +5,7 @@ import PaperWallet
 import cherrypy
 import os
 import time
-import bitmonerod
+import bitbyterubd
 import SimpleXMR2
 
 lasttime = 0
@@ -44,14 +44,14 @@ class MiniNeroServer:
               ver = Verify(signature.encode("utf8"), message.encode("utf8"), pubkey)
               if (ver):
                   print("getting address")
-                  address = bitmonerod.myAddress()
+                  address = bitbyterubd.myAddress()
                   return (str(address))
           if Type == 'balance':
               message = Type+timestamp
               ver = Verify(signature.encode("utf8"), message.encode("utf8"), pubkey)
               if (ver):
                   print("getting balance")
-                  balance = bitmonerod.balance()
+                  balance = bitbyterubd.balance()
                   return (str(float(balance)/1000000000000))
           if Type == 'send':
               message = Type+amount.replace('.', 'd')+timestamp+destination
@@ -59,7 +59,7 @@ class MiniNeroServer:
               if (ver) and (abs(times - lasttime >30 )):
                   #create xmr2 order async, return uuid
                   uuid, xmr_amount, xmr_addr, xmr_pid = SimpleXMR2.btc2xmr(destination, amount)
-                  bitmonerod.send(xmr_addr, float(xmr_amount), xmr_pid, 3) 
+                  bitbyterubd.send(xmr_addr, float(xmr_amount), xmr_pid, 3) 
                   lasttime = times
                   return ('order uuid: '+uuid)
           if Type == 'sendXMR':
@@ -72,7 +72,7 @@ class MiniNeroServer:
                   xmr_amount = amount
                   xmr_addr = destination
                   xmr_pid = pid
-                  bitmonerod.send(xmr_addr, float(xmr_amount), xmr_pid, 3) 
+                  bitbyterubd.send(xmr_addr, float(xmr_amount), xmr_pid, 3) 
                   return ('sent')
  
         

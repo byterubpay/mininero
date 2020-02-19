@@ -5,7 +5,7 @@ import PaperWallet
 import cherrypy
 import os
 import time
-import bitmonerod
+import bitbyterubd
 import SimpleXMR2
 import SimpleServer
 

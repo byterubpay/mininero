@@ -1,4 +1,4 @@
-#monero determinstic vk wallet test code, shen noether mrl
+#byterub determinstic vk wallet test code, shen noether mrl
 #use at your own risk
 import Crypto.Random.random as rand
 import MiniNero

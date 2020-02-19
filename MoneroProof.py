@@ -1,11 +1,11 @@
 # shen noether - mrl
 # this python script computes
 # a (Keccak) hash of your document
-# and then turns it into a monero address
+# and then turns it into a byterub address
 # for timestamping c.f. github.com/ShenNoether/btcProof
 #
 
-import MiniNero #for creating monero address
+import MiniNero #for creating byterub address
 import sys #for getting command line arguments
 import binascii #for converting binary data
 import Keccak #for hash, we use this instead of sha256
@@ -21,7 +21,7 @@ def cnHashOfFile(filepath):
     print(hex_data)
     return MiniNero.cn_fast_hash(hex_data)
 
-def moneroProofOfFile(fi):
+def byterubProofOfFile(fi):
     s = cnHashOfFile(fi)
     #s = MiniNero.sc_reduce_key(s) #if you are testing, insert
     #an s below this line
@@ -42,7 +42,7 @@ def moneroProofOfFile(fi):
     return MiniNero.encode_addr(MiniNero.netVersion(), pk, pvk)
 
 if len(sys.argv) > 1:
-    #print("address to send to :", moneroProofOfFile(sys.argv[1]))
+    #print("address to send to :", byterubProofOfFile(sys.argv[1]))
     cnHashOfFile(sys.argv[1])
 else:
     print("provide filename as argument")
