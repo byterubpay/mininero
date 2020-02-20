@@ -24,7 +24,7 @@ def send(destination_address, amount, payment_id, mixin):
     assert amount == float(get_money(str(int_amount))), "Amount conversion failed"
     
 
-    # send specified xmr amount to the given destination_address
+    # send specified btr amount to the given destination_address
     recipents = [{"address": destination_address,
                   "amount": int_amount}]
                   

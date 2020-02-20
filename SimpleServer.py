@@ -6,7 +6,7 @@ import cherrypy
 import os
 import time
 import bitbyterubd
-import SimpleXMR2
+import SimpleBTR2
 
 lasttime = 0
 
@@ -57,22 +57,22 @@ class MiniNeroServer:
               message = Type+amount.replace('.', 'd')+timestamp+destination
               ver = Verify(signature.encode("utf8"), message.encode("utf8"), pubkey)
               if (ver) and (abs(times - lasttime >30 )):
-                  #create xmr2 order async, return uuid
-                  uuid, xmr_amount, xmr_addr, xmr_pid = SimpleXMR2.btc2xmr(destination, amount)
-                  bitbyterubd.send(xmr_addr, float(xmr_amount), xmr_pid, 3) 
+                  #create btr2 order async, return uuid
+                  uuid, btr_amount, btr_addr, btr_pid = SimpleBTR2.btc2btr(destination, amount)
+                  bitbyterubd.send(btr_addr, float(btr_amount), btr_pid, 3) 
                   lasttime = times
                   return ('order uuid: '+uuid)
-          if Type == 'sendXMR':
+          if Type == 'sendBTR':
               message = Type+amount.replace('.', 'd')+timestamp+destination
               ver = Verify(signature.encode("utf8"), message.encode("utf8"), pubkey)
               if (ver) and (abs(times - lasttime >30 )):
-                  #create xmr2 order async, return uuid
-                  #uuid, xmr_amount, xmr_addr, xmr_pid = SimpleXMR2.btc2xmr(destination, amount)
+                  #create btr2 order async, return uuid
+                  #uuid, btr_amount, btr_addr, btr_pid = SimpleBTR2.btc2btr(destination, amount)
                   lasttime = times
-                  xmr_amount = amount
-                  xmr_addr = destination
-                  xmr_pid = pid
-                  bitbyterubd.send(xmr_addr, float(xmr_amount), xmr_pid, 3) 
+                  btr_amount = amount
+                  btr_addr = destination
+                  btr_pid = pid
+                  bitbyterubd.send(btr_addr, float(btr_amount), btr_pid, 3) 
                   return ('sent')
  
         

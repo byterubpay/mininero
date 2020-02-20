@@ -6,7 +6,7 @@ import cherrypy
 import os
 import time
 import bitbyterubd
-import SimpleXMR2
+import SimpleBTR2
 import SimpleServer
 
 message = "send0d000114545737471em2WCg9QKxRxbo6S3xKF2K4UDvdu6hMc"
